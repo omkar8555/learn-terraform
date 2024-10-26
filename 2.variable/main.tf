@@ -6,3 +6,8 @@ variable "A"{
 output "A" {
     value= var.A
     }
+
+
+output "A1" {
+    value= "a - $(var.A)"
+    }
