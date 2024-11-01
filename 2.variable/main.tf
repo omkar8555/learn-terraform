@@ -9,5 +9,5 @@ output "A" {
 
 
 output "A1" {
-    value= "a - $(var.A)"
+    value= "a - ${ var.A }"
     }
