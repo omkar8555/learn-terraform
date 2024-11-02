@@ -1,6 +1,6 @@
 resource "aws_route53_record" "record" {
-  zone_id = "Z02249652EM5BAO495DZ1"
-  name    = "${var.instance_name}-dev.rdevopsb81.online"
+  zone_id = "Z08947163LH0CXG3JRYK4"
+  name    = "${var.instance_name}-dev.rdevopsb72.shop"
   type    = "A"
   ttl     = "30"
   records = [var.ip_address]
