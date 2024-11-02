@@ -1,7 +1,7 @@
 resource "aws_instance" "test" {
     ami =  data.aws_ami.ami.id
     instance_type = "t3.small"
-    vpc_security_group_ids = [ aws_security_groups.sg.id ]
+    vpc_security_group_ids = [ data.aws_security_groups.sg.id ]
     tags = {
         Name = "frontend"
         }
@@ -13,7 +13,7 @@ data "aws_ami" "ami" {
   owners           = ["973714476881"]
   }
 
-  data "aws_security_groups" "sg" {
+  data "aws_security_group" "sg" {
       name   = "allow-all"
 
   }
