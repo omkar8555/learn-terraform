@@ -2,7 +2,7 @@ variable "list" {
     default = [
         10,
         20,
-        "ys"
+        "ys",
         false
         ]
     }
