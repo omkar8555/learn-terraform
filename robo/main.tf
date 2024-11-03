@@ -16,10 +16,10 @@
          }
      }
  resource "aws_route53_record" "record" {
-     count = length(var.instances)
-    zone_id = "Z08947163LH0CXG3JRYK4"
-     name = "${ var.instances[count.index]}-dev.rdevopsb72.shop"
-     type = "A"
-     ttl = "30"
-     records = [aws_instance.instance[count.index].private_ip]
-     }
+   count = length(var.instances)
+   zone_id = "Z08947163LH0CXG3JRYK4"
+   name    = "${var.instances[count.index]}-dev.rdevopsb72.shop"
+   type    = "A"
+   ttl     = "30"
+   records = [aws_instance.instance[count.index].private_ip]
+ }
