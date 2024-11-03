@@ -1,11 +1,12 @@
-variable "A" {
-    default = "omkar"
+variable "list" {
+    default = [
+        10,
+        20,
+        "ys"
+        false
+        ]
     }
 
-variable "B" {
-    default = "reddy"
-    }
-
-output "name" {
-    value = "{var.A} ${var.B}"
+output "list" {
+    value = var.list[3]
     }
