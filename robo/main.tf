@@ -11,5 +11,5 @@ variable "map" {
     }
 }
 output "aws_trainer" {
-    value = var.map{"aws"}.dur
+    value = var.map["aws"].dur
     }
