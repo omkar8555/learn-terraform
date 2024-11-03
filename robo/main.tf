@@ -8,5 +8,5 @@ variable "list" {
     }
 
 output "list" {
-    value = var.list[0]
+    value = var.list[0,1]
     }
