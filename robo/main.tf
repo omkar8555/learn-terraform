@@ -12,5 +12,5 @@ variable "map" {
 }
 
 output "map" {
-    value = var.map{"aws"}{"trainer"}
+    value = var.map["aws"]["trainer"]
     }
