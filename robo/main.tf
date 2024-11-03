@@ -13,7 +13,7 @@ resource "aws_instance"  "h" {
    name_regex       = "RHEL-9-DevOps-Practice"
    owners           = ["973714476881"]
 
-data "aws_security_groups" "id" {
+data "aws_security_group" "sg {
   filter {
     name   = "allow-all"
   }
