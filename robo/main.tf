@@ -1,12 +1,16 @@
-variable "list" {
-    default = [
-        10,
-        20,
-        "ys",
-        false
-        ]
+variable "map" {
+    default = {
+       aws = {
+           trainer ="a"
+           duration = 30
+           }
+       devops = {
+           trainer ="b"
+           duration = 30
+           }
     }
+}
 
-output "list" {
-    value = var.list[3]
+output "map" {
+    value = var.map{"aws"}.trainer
     }
