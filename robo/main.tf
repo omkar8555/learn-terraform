@@ -28,9 +28,7 @@ variable "map1" {
   }
 }
 
-output "list1_1" {
-  value = var.list1[2]
-}
+
 
 output "map1_aws_trainer" {
   value = var.map1["aws"]["trainer"]
