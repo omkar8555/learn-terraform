@@ -6,6 +6,6 @@ variable "B" {
     default = "reddy"
     }
 
-output "X" {
+output "name" {
     value = "${var.A} ${var.B}"
     }
