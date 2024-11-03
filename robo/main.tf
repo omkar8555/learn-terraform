@@ -1,33 +1,26 @@
  variable "instances" {
    default = [
-     "frontend",
-     "cart",
-     "catalogue",
-     "user",
-     "shipping",
-     "payment",
-     "mysql",
-     "mongodb",
-     "rabbitmq",
-     "redis"
+     frontend = {}
+     cart = {}
+
    ]
  }
 
  resource "aws_instance" "instance" {
-   count = length(var.instances)
+   for_each = var.instance
    ami           = "ami-09c813fb71547fc4f"
    instance_type = "t3.small"
    vpc_security_group_ids = ["sg-05180aaee83558bdc"]
    tags = {
-     Name = var.instances[count.index]
+     Name = each.key
    }
  }
 
  resource "aws_route53_record" "record" {
-   count = length(var.instances)
+      for_each = var.instance
    zone_id = "Z08947163LH0CXG3JRYK4"
-   name    = "${var.instances[count.index]}-dev.rdevopsb72.shop"
+   name    = "${each.key}-dev.rdevopsb72.shop"
    type    = "A"
    ttl     = "30"
-   records = [aws_instance.instance[count.index].private_ip]
+   records = [aws_instance.instance[each.key].private_ip]
  }
