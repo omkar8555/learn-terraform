@@ -1,7 +1,11 @@
 variable "A" {
-    default = true
+    default = "omkar"
+    }
+
+variable "B" {
+    default = "reddy"
     }
 
 output "X" {
-    value = var.A
+    value = "${var.A} ${var.B}"
     }
