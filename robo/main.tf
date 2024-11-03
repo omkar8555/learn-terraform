@@ -1,21 +1,12 @@
-variable "x" {
-    default = "omkar"
-    }
-output "name" {
-    value = var.x
-    }
-
-output "name1" {
-    value = "${var.x} reddy"
+variable "list" {
+    default = [
+        10,
+        20,
+        true,
+        "jkl0"
+        ]
     }
 
-variable "A" {
-    default = "omkar"
-    }
-variable "B" {
-    default = "reddy"
-    }
-
-output "name2" {
-    value =  "${var.A} ${var.B}"
+output "list" {
+    value = var.list[0]
     }
