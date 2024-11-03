@@ -3,7 +3,7 @@ resource "aws_instance"  "h" {
   instance_type = "t3.small"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
   tags = {
-    Name = gh
+    Name = h
   }
 }
 
