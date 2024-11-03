@@ -1,9 +1,9 @@
  variable "instances" {
-   default = [
+   default = {
      frontend = {}
      cart = {}
 
-   ]
+   }
  }
 
  resource "aws_instance" "instance" {
