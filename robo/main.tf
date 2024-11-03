@@ -15,3 +15,4 @@ output "aws_trainer" {
     value= var.map["aws"].trainer
 }
 
+variable "traainer_name" {}
