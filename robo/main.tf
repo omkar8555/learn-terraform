@@ -1,7 +1,7 @@
 variable "A" {
-    default = "omkar reddy"
+    default = true
     }
 
 output "X" {
-    value = "p.g.${var.A}"
+    value = var.A
     }
