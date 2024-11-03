@@ -8,10 +8,10 @@
  resource "aws_instance" "A" {
      count = length(var.instance)
      ami = "ami-09c813fb71547fc4f"
-     instance_type= "t3.small"
+     instance_type = "t3.small"
       vpc_security_group_ids =["sg-05180aaee83558bdc"]
      tags ={
-         Name=var.instance[count.index]
+         Name = var.instance[count.index]
          }
      }
  resource "aws_route53_record" "record" {
