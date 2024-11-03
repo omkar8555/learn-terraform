@@ -7,5 +7,5 @@ variable "B" {
     }
 
 output "name" {
-    value = "var.A ${var.B}"
+    value = "{var.A} ${var.B}"
     }
