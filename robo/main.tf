@@ -7,7 +7,7 @@ resource "aws_instance" "frontend" {
         }
     }
 
-resource "aws_instance" "frontend"{
+resource "aws_route53_record" "frontend"{
     zone_id= "Z08947163LH0CXG3JRYK4"
     name = "frontend-dev.rdevopsb72.shop"
     type = "A"
