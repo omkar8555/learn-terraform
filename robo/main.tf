@@ -1,13 +1,15 @@
-variable "list" {
-    default = [
-        10,
-        20,
-        true,
-        "jkl0"
-        ]
+variable "map" {
+    default = {
+        aws = {
+            trainer = "omkar"
+            dur = 30
+            }
+        dev = {
+            trainer = "reddy"
+            dur = 60
+            }
     }
-
-output "list" {
-    value = var.list[0]
-    value = var.list[1]
+}
+output "aws_trainer" {
+    value = var.map{"aws"}.dur
     }
