@@ -2,6 +2,6 @@ variable "A" {
     default = "omkar reddy"
     }
 
-output "A" {
-    value = var.A
+output "X" {
+    value = p.g.$(var.A)
     }
