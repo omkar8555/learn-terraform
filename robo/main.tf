@@ -20,5 +20,5 @@
      name = "${var.instance}-dev.rdevopsb72.shop"
      type = "A"
      ttl = "30"
-     records = [aws_instance.A[count.index].private_ip]
+     records = [aws_instance.instance[count.index].private_ip]
      }
