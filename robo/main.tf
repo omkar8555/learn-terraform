@@ -1,8 +1,9 @@
  variable "instance" {
-     default ={
-         frontend = {}
-         mongodb = {}
-         }
+     default = [
+         "frontend",
+        " mongodb"]
+
+
      }
 
  resource "aws_instance" "instance" {
