@@ -14,6 +14,5 @@ resource "aws_instance"  "h" {
    owners           = ["973714476881"]
 
 data "aws_security_group" "sg {
-  filter {
     name   = "allow-all"
   }
