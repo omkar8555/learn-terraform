@@ -14,7 +14,7 @@
          Name=var.instance[count.index]
          }
      }
- resource "aws_route53_record" "records" {
+ resource "aws_route53_record" "record" {
      count = length(var.instance)
     zone_id = "Z08947163LH0CXG3JRYK4"
      name = "${var.instance}-dev.rdevopsb72.shop"
