@@ -12,6 +12,6 @@ variable "map" {
 }
 
 output "aws_trainer" {
-    value= var.aws_trainer["aws"].trainer}
+    value= var.map["aws"].trainer}
 }
 
