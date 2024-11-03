@@ -3,5 +3,5 @@ variable "A" {
     }
 
 output "X" {
-    value = p - ${var.A}
+    value = "p.g. - ${var.A}"
     }
