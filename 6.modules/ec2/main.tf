@@ -3,15 +3,13 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-05180aaee83558bdc"]
   tags = {
-    Name = var.instance_name
+    Name = var.component_name
   }
 }
 
-variable "instance_name" {}
-
+variable "component_name" {}
 output "ip_address" {
-  value = aws_instance.instance.private_ip
-}
-
+    value = aws_instance.instance[count.index].ip_address
+    }
 # Output in child module wont print on screen,
 # Output in root module will print on screen as output
