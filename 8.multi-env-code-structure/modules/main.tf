@@ -3,7 +3,7 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-05180aaee83558bdc"]
   tags = {
-    Name = "test-${var.env}"
+    Name = "test-var.env"
   }
 }
 
