@@ -7,4 +7,4 @@ resource "aws_route53_record" "record" {
 }
 
 variable "component_name" {}
-variable "ip_adress"{}
+variable "ip_address" {}
