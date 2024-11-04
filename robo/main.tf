@@ -1,8 +1,8 @@
 variable "fruits" {
     default = [
-    apple,
-    banana,
-    mango
+"apple",
+    "banana",
+    "mango"
     ]
 }
 
