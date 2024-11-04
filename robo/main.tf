@@ -7,5 +7,5 @@ variable "fruits" {
 }
 
 resource "null_resource" "fruits" {
-    for_each = var.fruits
+    count = 10
     }
