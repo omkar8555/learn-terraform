@@ -1,12 +1,12 @@
 data "aws_ami" "ami" {
-    most recent = true
+    most_recent = true
     nam_regex = "RHEL-9-DevOps-Practice"
     owner = ["973714476881"]
 
     }
 
 data "aws_security_group" "sg" {
-    name "allow-all"
+    name = "allow-all"
     }
 
 resource "aws_instance" "test" {
