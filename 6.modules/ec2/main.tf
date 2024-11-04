@@ -8,8 +8,10 @@ resource "aws_instance" "instance" {
 }
 
 variable "component_name" {}
+
 output "ip_address" {
-    value = aws_instance.instance[count.index].ip_address
+    value = aws_instance.instance.ip_address
     }
+
 # Output in child module wont print on screen,
 # Output in root module will print on screen as output
