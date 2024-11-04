@@ -1,3 +1,11 @@
-resource "null_resource" "demo" {
-    count = 10
+variable "fruits" {
+    default = {
+    apple = {}
+    banana = {}
+    mango {}
+    }
+}
+
+resource "null_resource" "fruits" {
+    for_each = var.fruits
     }
