@@ -1,9 +1,9 @@
 variable "fruits" {
-    default = {
-    apple = {}
-    banana = {}
-    mango =  {}
-    }
+    default = [
+    apple,
+    banana,
+    mango
+    ]
 }
 
 resource "null_resource" "fruits" {
