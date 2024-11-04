@@ -1,18 +1,12 @@
-data "aws_ami" "ami" {
-    most_recent = true
-    name_regex = "RHEL-9-DevOps-Practice"
-    owners = ["973714476881"]
-    }
+module "roboshop" {
+  for_each = var.instances
+  source = "./module"
+  component_name = each.key
+}
 
-data "aws_security_group" "sg" {
-    name = "allow-all"
-    }
-
-resource "aws_instance" "test" {
-    ami = data.aws_ami.ami.id
-    instance_type = "t3.small"
-    vpc_security_group_ids = [data.aws_security_group.sg.id]
-    tags = {
-        Name = "test"
-        }
-    }
+variable "instances" {
+  default = {
+    frontend = {}
+    cart = {}
+   }
+  }
