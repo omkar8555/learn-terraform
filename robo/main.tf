@@ -2,7 +2,7 @@ variable "fruits" {
     default = {
     apple = {}
     banana = {}
-    mango {}
+    mango =  {}
     }
 }
 
