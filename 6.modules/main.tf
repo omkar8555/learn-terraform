@@ -7,13 +7,13 @@ resource "instances" {
 
 module "ec2" {
     count = length(var.instances)
-    source = "./module"
+    source = "./ec2"
     name = var.component_name[count.index]
     }
 
 module "route53" {
     count = length(var.instances)
-    source = "./module"
+    source = "./route53"
     name = var.component_name[count.index]
     ip_address = module.ec2[count.index].ip_address
     }
