@@ -1,4 +1,4 @@
-resource "instances" {
+variable "instances" {
     default = [
         "test1",
         "test2"
