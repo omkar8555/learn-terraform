@@ -10,7 +10,7 @@ resource "aws_instance" "instance" {
 variable "component_name" {}
 
 output "ip_address" {
-    value = aws_instance.instance.ip_address
+    value = aws_instance.instance.private_ip
     }
 
 # Output in child module wont print on screen,
