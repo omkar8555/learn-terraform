@@ -1,9 +1,9 @@
 provider "vault" {
   address = "http://172.31.45.188:8200"
-  token   =  var.token_vault
+  token   =  var.vault_token
   skip_tls_verify = true
   }
-  variable "token_value" {}
+  variable "value_token" {}
 
   data "vault-kv-secret_v2" "example" {
       name = "my_credentials"
