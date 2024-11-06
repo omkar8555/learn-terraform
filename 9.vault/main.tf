@@ -4,3 +4,8 @@ provider "vault" {
   skip_tls_verify = true
   }
   variable "token_value" {}
+
+  data "vault-kv-secret_v2" "example" {
+      name = "my_credentials"
+      mount= "test"
+      }
