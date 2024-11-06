@@ -5,7 +5,7 @@ provider "vault" {
   }
   variable "value_token" {}
 
-  data "vault-kv-secret_v2" "example" {
-      name = "my_credentials"
-      mount= "test"
+  data "vault_kv_secret_v2" "example" {
+      name  = "my_credentials"
+      mount = "test"
       }
