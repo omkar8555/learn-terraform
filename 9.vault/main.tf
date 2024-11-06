@@ -3,7 +3,8 @@ provider "vault" {
   token   =  var.vault_token
   skip_tls_verify = true
   }
-  variable "value_token" {}
+
+  variable "vault_token" {}
 
   data "vault_kv_secret_v2" "example" {
       name  = "my_credentials"
