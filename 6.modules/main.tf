@@ -9,7 +9,7 @@ module "ec2" {
     count = length(var.instances)
     source = "./ec2"
     component_name = var.instances[count.index]
-    ip_address = var.instances.ip_address
+    ip_address = ip_address[count.index]
 
     }
 
