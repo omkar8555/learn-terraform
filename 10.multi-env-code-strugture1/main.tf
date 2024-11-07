@@ -3,4 +3,8 @@ module "ec2" {
     env    = var.env
     }
 
+module "route53" {
+    source = "./modules"
+    env    = var.env
+    }
 

@@ -12,6 +12,6 @@ resource "aws_route53_record" "record" {
   zone_id = "Z08947163LH0CXG3JRYK4"
   name    = "test-${var.env}.rdevopsb72.shop"
   type    = "A"
-  ttl     = 30
-  records = ["aws_instance.instance.public_ip"]
+  ttl     = "30"
+  records = [aws_instance.instance.public_ip]
 }
