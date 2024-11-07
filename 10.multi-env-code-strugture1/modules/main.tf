@@ -13,5 +13,5 @@ resource "aws_route53_record" "record" {
   name    ="test-${var.env}.rdevopsb72.shop"
   type    = "A"
   ttl     = "30"
-  records = [aws_instance.instance.private_ip]
+  records = [aws_instance.instance.public_ip]
 }
