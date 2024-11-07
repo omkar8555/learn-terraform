@@ -6,4 +6,3 @@ resource "aws_instance" "instace" {
          Name = "test-${var.env}"
          }
      }
- variable "env" {}
