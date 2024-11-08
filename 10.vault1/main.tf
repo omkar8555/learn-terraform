@@ -1,6 +1,9 @@
-token   =  var.vault_token
+provider "vault" {
+  address = "https://172.31.45.188:8200"
+  token   =  var.vault_token
   skip_tls_verify = true
   }
+
 
   variable "vault_token" {}
 
